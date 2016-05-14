@@ -9,7 +9,6 @@ CMD ["/sbin/my_init"]
 
 # Add local files
 ADD src/ /
-ADD MediathekView_11/ /opt/
 # start files and config etc....
 RUN mv /rc.xml /nobody/.config/openbox/rc.xml && \
 
@@ -25,6 +24,10 @@ echo 'deb http://archive.ubuntu.com/ubuntu trusty-updates main universe restrict
 apt-get install -qy \
 vlc \
 flvstreamer \
-mplayer
+mplayer && \
+
+# download Mediathekview
+wget http://heanet.dl.sourceforge.net/project/zdfmediathk/Mediathek/Mediathek%2011/MediathekView_11.zip -P /opt/ && \
+unzip /opt/MediathekView_11.zip -d /opt/
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle

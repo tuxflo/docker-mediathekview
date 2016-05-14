@@ -9,9 +9,8 @@ I'm running this on a NAS to add Videos out of the Mediathek directly to my Mult
 ### Manual
 
 1. download Dockerfile or clone the repository
-2. download [Mediathekview](http://sourceforge.net/projects/zdfmediathk/files/Mediathek/) and extract the zip into the folder containing the Dockerfile
-3. run `docker build .` to create the docker image
-4. wait until build process is finished
+2. run `docker build .` to create the docker image
+3. wait until build process is finished
 
 ### Automatic
 
