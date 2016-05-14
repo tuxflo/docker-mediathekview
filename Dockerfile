@@ -24,6 +24,7 @@ echo 'deb http://archive.ubuntu.com/ubuntu trusty-updates main universe restrict
 apt-get install -qy \
 vlc \
 flvstreamer \
+ffmpeg \
 mplayer && \
 
 # download Mediathekview
