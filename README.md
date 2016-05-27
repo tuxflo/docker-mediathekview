@@ -19,6 +19,7 @@ I'm running this on a NAS to add Videos out of the Mediathek directly to my Mult
 ## Run
 The container can be started using `docker run -p <PORT>:8080 -v <PATH_TO_FOLDER>:/nobody/MediathekView <IMAGE_ID_OF_DOCKER_BUILD>` if installed manually or `docker run -p <PORT>:8080 -v <PATH_TO_FOLDER>:/nobody/MediathekView tuxflo/docker-mediathekview` if pulled from dockerhub. Replace <PORT> by a free port you want to use to access the container. Replace <PATH_TO_FOLDER> with your Multimedia location of the host system.
 Now you can access the webgui by locating your browser to serverpath:<PORT> for example localhost:8080 if running locally. Choose MediathekView listed under "ALL CONNECTIONS" and hit OK in the xrdp window.
+If you also map the port 3389 you can use `rdesktop` to access the GUI wich is faster on NAS systems with limited ressources.
 
 ## Issues
 * For some reason the content of the initialization Wizzard gets only renderd in the browserwindow if hovered by the mousepointer, so move the mouse across the window to make the buttons visible. On the second step close the empty window and click on "Weiter" button (see second screenshot) ![Screenshot of initialization wizzard](https://raw.githubusercontent.com/tuxflo/docker-mediathekview/master/Selection_042.png)
